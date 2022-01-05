@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+.col-25 {
+  width: 25%;
+}
+.col-50 {
+  width: 50%;
+}
+.col-35 {
+  width: 35%;
+}
+.col-15 {
+  width: 15%;
+}
+.col-100 {
+  width: 100%;
+}
+.col-70 {
+  width: 70%;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.header {
+  font-family: "Staatliches", cursive;
+  font-size: 4em;
+  color: rgb(41, 41, 41);
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  background-color: rgb(180, 43, 43);
+  text-align: end;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+html {
+}
+
+.age-field {
+  width: 80%;
+}
+.height-field {
+  width: 60%;
+}
+.weight-field {
+  width: 60%;
+}
+.activity-label {
+  margin-left: 50%;
+}
+.submit-button1 {
+  margin-left: 42%;
+}
+.form-block {
+  background-color: rgb(41, 41, 41);
+  color: white;
+  border-radius: 15px;
+}

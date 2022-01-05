@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel='stylesheet' href='main.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class='row'>
+        <div class='header'>
+            CALORIES
+        </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-25'></div>
+        <div class='col-25'>
+            <div class='faq-block'>
+                <h3>Why count calories?</h3>
+                <p>Counting calories can help you lose weight by bringing awareness to what you eat each day. This can help you identify eating patterns that you may need to modify, keeping you on track to reach your goals.</p>
+                <h3>Activity Levels</h3>
+                <p>Sedentary: no exercise/workouts
+                    <br>Light: workouts 1-3 times/week
+                    <br>Moderate: workouts 4-5 times/week
+                    <br>Active: daily workouts or intense workouts 3-4 days/week
+                    <br>Very Active: intense workouts 6-7 days/week
+                    <br>Extra Active: intense workouts daily/physical labour
+                </p>
+            </div>
+        </div>
+        <div class='col-25'>
+            <div class='form-block'>
+                <form class='form'>
+                    <div class='row'>
+                        <div class='col-50'>
+                            <label for='age-field'>Age</label>
+                            <input type="number" class='age-field'>
+                        </div>
+                        <div class='col-25'>
+                            <input type="radio" class='m-radio'>
+                            <label for='m-radio'>Male</label>
+                        </div>
+                        <div class='col-25'>
+                            <input type="radio" class='f-radio'>
+                            <label for='f-radio'>Female</label>
+                        </div>
+                    </div>
+
+                    <div class='row'>
+                        <div class='col-50'>
+                            <label for='height-field'>Height</label>
+                            <input type="number" class='height-field'>
+                            <label for='height-field'>cm</label>
+                        </div>
+                        <div class='col-50'>
+                            <label for='height-field'>Weight</label>
+                            <input type="number" class='weight-field'>
+                            <label for='weight-field'>kg</label>
+                        </div>
+                    </div>
+
+                    <div class='row'>
+                        <div class='col-50'>
+                            <label class='activity-label'>Activity Level</label>
+                        </div>
+                        <div class='col-50'>
+                            <div class='row'>
+                                <input type="radio" class='sedentary'>
+                                <label for='sedentary'>Sedentary</label>
+                            </div>
+
+                            <div class='row'>
+                                <input type="radio" class='light'>
+                                <label for='light'>Light</label>
+                            </div>
+
+                            <div class='row'>
+                                <input type="radio" class='moderate'>
+                                <label for='moderate'>Moderate</label>
+                            </div>
+
+                            <div class='row'>
+                                <input type="radio" class='active'>
+                                <label for='active'>Active</label>
+                            </div>
+
+                            <div class='row'>
+                                <input type="radio" class='very-active'>
+                                <label for='very-active'>Very Active</label>
+                            </div>
+
+                            <div class='row'>
+                                <input type="radio" class='extra-active'>
+                                <label for='extra-active'>Extra Active</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='row'>
+                        <div class='col-100'>
+                            <input type="submit" class='submit-button1'>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class='col-25'></div>
+    </div>
+
+    <div class='row'>
+        <div class='col-15'></div>
+        <div class='col-70'>
+            <div class='counter'>
+                <h1>0/0 cal</h1>
+                <progress></progress>
+            </div>
+        </div>
+        <div class='col-15'></div>
+    </div>
+
+    <div class='row'>
+        <div class='col-15'></div>
+        <div class='col-70'>
+            <div class='row'>
+                <label for='food-field'>Food</label>
+                <input type='text' class='food-field'>
+                <label for='cal-field'>cal</label>
+                <input type='text' class='cal-field'>
+            </div>
+
+            <div class='row'>
+                <input type="submit">
+            </div>
+        </div>
+        <div class='col-15'></div>
+    </div>
+    <script src='main.js'></script>
+</body>
+</html>
