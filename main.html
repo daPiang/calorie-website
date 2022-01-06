@@ -3,18 +3,18 @@
 <head>
     <link rel='stylesheet' href='main.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Staatliches&display=swap" rel="stylesheet">
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NO CALORIES</title>
 </head>
 <body>
     <div class='row'>
         <div class='header'>
-            CALORIES
+            WEIGHT LOSS
         </div>
     </div>
 
@@ -36,18 +36,17 @@
         </div>
         <div class='col-25'>
             <div class='form-block'>
-                <form class='form'>
                     <div class='row'>
                         <div class='col-50'>
                             <label for='age-field'>Age</label>
-                            <input type="number" class='age-field'>
+                            <input type="number" class='age-field' id='age-field'>
                         </div>
                         <div class='col-25'>
-                            <input type="radio" class='m-radio'>
+                            <input type="radio" class='m-radio' id='m-radio' onclick="genderRadioMale()">
                             <label for='m-radio'>Male</label>
                         </div>
                         <div class='col-25'>
-                            <input type="radio" class='f-radio'>
+                            <input type="radio" class='f-radio' id='f-radio' onclick="genderRadioFem()">
                             <label for='f-radio'>Female</label>
                         </div>
                     </div>
@@ -55,12 +54,12 @@
                     <div class='row'>
                         <div class='col-50'>
                             <label for='height-field'>Height</label>
-                            <input type="number" class='height-field'>
+                            <input type="number" class='height-field' id='height-field'>
                             <label for='height-field'>cm</label>
                         </div>
                         <div class='col-50'>
                             <label for='height-field'>Weight</label>
-                            <input type="number" class='weight-field'>
+                            <input type="number" class='weight-field' id='weight-field'>
                             <label for='weight-field'>kg</label>
                         </div>
                     </div>
@@ -71,32 +70,32 @@
                         </div>
                         <div class='col-50'>
                             <div class='row'>
-                                <input type="radio" class='sedentary'>
+                                <input type="radio" class='sedentary' id='sedentary' onclick="setSed()">
                                 <label for='sedentary'>Sedentary</label>
                             </div>
 
                             <div class='row'>
-                                <input type="radio" class='light'>
+                                <input type="radio" class='light' id='light' onclick="setLig()">
                                 <label for='light'>Light</label>
                             </div>
 
                             <div class='row'>
-                                <input type="radio" class='moderate'>
+                                <input type="radio" class='moderate' id='moderate' onclick="setMod()">
                                 <label for='moderate'>Moderate</label>
                             </div>
 
                             <div class='row'>
-                                <input type="radio" class='active'>
+                                <input type="radio" class='active' id='active' onclick="setAct()">
                                 <label for='active'>Active</label>
                             </div>
 
                             <div class='row'>
-                                <input type="radio" class='very-active'>
+                                <input type="radio" class='very-active' id='very-active' onclick="setVac()">
                                 <label for='very-active'>Very Active</label>
                             </div>
 
                             <div class='row'>
-                                <input type="radio" class='extra-active'>
+                                <input type="radio" class='extra-active' id='extra-active' onclick="setEac()">
                                 <label for='extra-active'>Extra Active</label>
                             </div>
                         </div>
@@ -104,41 +103,45 @@
 
                     <div class='row'>
                         <div class='col-100'>
-                            <input type="submit" class='submit-button1'>
+                            <input type="submit" class='submit-button1' onclick="useFormula()">
                         </div>
                     </div>
-                </form>
             </div>
         </div>
         <div class='col-25'></div>
     </div>
 
     <div class='row'>
-        <div class='col-15'></div>
-        <div class='col-70'>
+        <div class='col-25'></div>
+        <div class='col-50'>
             <div class='counter'>
-                <h1>0/0 cal</h1>
-                <progress></progress>
+                <div class='cal-values'>
+                    <h1><output id='cal_limit'>0</output> cal</h1>
+                </div>
+                
+                <progress class='progress-bar' max="1200" value="600" id='progress-bar'></progress>
             </div>
         </div>
-        <div class='col-15'></div>
+        <div class='col-25'></div>
     </div>
 
     <div class='row'>
-        <div class='col-15'></div>
-        <div class='col-70'>
-            <div class='row'>
-                <label for='food-field'>Food</label>
-                <input type='text' class='food-field'>
-                <label for='cal-field'>cal</label>
-                <input type='text' class='cal-field'>
-            </div>
-
-            <div class='row'>
-                <input type="submit">
+        <div class='col-25'></div>
+        <div class='col-50'>
+            <div class='food-container'>
+                <div class='row'>
+                    <label for='food-field' class='food-label'>Food</label>
+                    <input type='text' class='food-field' id='food-field'>
+                    <label for='cal-field' class='cal-label'>cal</label>
+                    <input type='text' class='cal-field' id='cal-field'>
+                </div>
+    
+                <div class='row'>
+                    <input type="submit" class='submit-button2' onclick="subCals()">
+                </div>
             </div>
         </div>
-        <div class='col-15'></div>
+        <div class='col-25'></div>
     </div>
     <script src='main.js'></script>
 </body>

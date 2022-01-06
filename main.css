@@ -41,6 +41,7 @@
   border-bottom-right-radius: 15px;
 }
 html {
+  font-family: "PT Sans", sans-serif;
 }
 
 .age-field {
@@ -62,4 +63,38 @@ html {
   background-color: rgb(41, 41, 41);
   color: white;
   border-radius: 15px;
+}
+
+.food-container {
+}
+.progress-bar {
+  margin-left: 24%;
+  width: 50%;
+  height: 2.3rem;
+  color: rgb(180, 43, 43);
+}
+.progress-bar::-webkit-progress-value {
+  background: rgb(180, 43, 43);
+}
+.progress-bar::-moz-progress-bar {
+  background: rgb(180, 43, 43);
+}
+.food-label {
+  margin-left: 33%;
+}
+.food-field {
+  width: 11%;
+}
+.cal-label {
+  margin-left: 3%;
+}
+.cal-field {
+  width: 6%;
+}
+.submit-button2 {
+  margin-top: 15px;
+  margin-left: 45.7%;
+}
+.cal-values {
+  margin-left: 45%;
 }
