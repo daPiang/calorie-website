@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel='stylesheet' href='main.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Staatliches&display=swap" rel="stylesheet">
+
+    <script src="js/math.js" type="text/javascript"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NO CALORIES</title>
+</head>
+<body>
+    <div class='row'>
+        <div class='header'>
+            WEIGHT LOSS
+        </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-25'></div>
+        <div class='col-50'>
+            <div class='counter'>
+                <div class='cal-values'>
+                    <h1><a id='cal_limit'>0</a> cal</h1>
+                </div>
+                
+                <progress class='progress-bar' max="1200" value="600" id='progress-bar'></progress>
+            </div>
+        </div>
+        <div class='col-25'></div>
+    </div>
+
+    <div class='row'>
+        <div class='col-25'></div>
+        <div class='col-50'>
+            <div class='food-container'>
+                <div class='row'>
+                    <label for='food-field' class='food-label'>Food</label>
+                    <input type='text' class='food-field' id='food-field'>
+                    <label for='cal-field' class='cal-label'>cal</label>
+                    <input type='text' class='cal-field' id='cal-field'>
+                </div>
+    
+                <div class='row'>
+                    <input type="submit" class='submit-button2' onclick="subCals()">
+                </div>
+            </div>
+        </div>
+        <div class='col-25'></div>
+    </div>
+    
+    <script src='js/cal.js'></script>
+</body>
+</html>

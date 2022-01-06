@@ -43,7 +43,6 @@
 html {
   font-family: "PT Sans", sans-serif;
 }
-
 .age-field {
   width: 80%;
 }
@@ -63,9 +62,6 @@ html {
   background-color: rgb(41, 41, 41);
   color: white;
   border-radius: 15px;
-}
-
-.food-container {
 }
 .progress-bar {
   margin-left: 24%;

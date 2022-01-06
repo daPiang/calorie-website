@@ -1,6 +1,21 @@
-let male_rad = document.getElementById('m-radio');
-let fem_rad = document.getElementById('f-radio');
+//Gender Radio Button Stuff
+const male_rad = document.getElementById('m-radio');
+const fem_rad = document.getElementById('f-radio');
+const height = document.getElementById('height-field');
+const weight = document.getElementById('weight-field');
+const age = document.getElementById('age-field');
+const sed = document.getElementById('sedentary');
+const lig = document.getElementById('light');
+const mod = document.getElementById('moderate');
+const act = document.getElementById('active');
+const vac = document.getElementById('very-active');
+const eac = document.getElementById('extra-active');
+const submit = document.getElementById('submit-button1');
+
+let activityState = 0;
 let genderState = 0;
+let cal_limit = '';
+let loss = 0;
 
 function genderRadioMale() {
     genderState = 0;
@@ -17,37 +32,38 @@ function genderRadio() {
         male_rad.checked = false;
     }
 }
-
-let sed = document.getElementById('sedentary');
-let lig = document.getElementById('light');
-let mod = document.getElementById('moderate');
-let act = document.getElementById('active');
-let vac = document.getElementById('very-active');
-let eac = document.getElementById('extra-active');
-let activityState = 0;
-
+function init() {
+    male_rad.checked=true;
+    sed.checked=true;
+}
 function setSed() {
     activityState=0;
+    loss=129.5;
     activity();
 }
 function setLig() {
     activityState=1;
+    loss=-194.5;
     activity();
 }
 function setMod() {
     activityState=2;
+    loss=-361.5;
     activity();
 }
 function setAct() {
     activityState=3;
+    loss=-518.5;
     activity();
 }
 function setVac() {
     activityState=4;
+    loss=-843.5;
     activity();
 }
 function setEac() {
     activityState=5;
+    loss=-1167.5;
     activity();
 }
 function activity() {
@@ -96,34 +112,22 @@ function activity() {
             break;
     }
 }
-
-let height = document.getElementById('height-field').value;
-let weight = document.getElementById('weight-field').value;
-let age = document.getElementById('age-field').value;
-
-let cal_limit = document.getElementById('cal_limit');
-
-//BUG IN CODE FIX LATER
 function useFormula() {
+    const cal_scope = {
+        W: weight.value,
+        H: height.value,
+        A: age.value,
+        L: loss
+    }
     switch(genderState) {
         case 0:
-            cal_limit.innerHTML = Number.parseInt(cal_limit.innerHTML) + Number(10*weight+6.25*height-5*age+5);
-            progress.max = Number.parseInt(cal_limit.innerHTML);
-            progress.value = 0;
+            cal_limit = math.evaluate('10W+6.25H-5A+5-L', cal_scope);
             break;
         case 1:
-            cal_limit.innerHTML = Number.parseInt(cal_limit.innerHTML) + Number(10*weight+6.25*height-5*age-161);
-            progress.max = Number.parseInt(cal_limit.innerHTML);
-            progress.value = 0;
+            cal_limit = math.evaluate('10W+6.25H-5A-161-L', cal_scope);
             break;
     }
+    sessionStorage.calories = cal_limit;
 }
 
-let user_cal = document.getElementById('cal-field').value;
-
-function subCals() {
-    cal_limit.innerHTML = Number.parseInt(cal_limit.innerHTML) - user_cal;
-    progress.value += user_cal;
-}
-
-let progress = document.getElementById('progress-bar');
+init();
